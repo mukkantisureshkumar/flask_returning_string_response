@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 
 Flask_Application_Instance=Flask(__name__)
 
@@ -9,4 +9,9 @@ def suresh():
               all type of code are written in one file only we dont have here views urls models forms 
               httpresponse also handled by flask application instance</h1></center>'''
 
-Flask_Application_Instance.run(debug=True) #is used for running server
+
+@Flask_Application_Instance.route('/hai')
+def hai():
+    return render_template('hai.html')
+
+Flask_Application_Instance.run(debug=True)
