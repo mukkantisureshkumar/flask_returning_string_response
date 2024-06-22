@@ -12,6 +12,6 @@ def suresh():
 
 @Flask_Application_Instance.route('/hai')
 def hai():
-    return render_template('hai.html')
+    return render_template('hai.html',name='ramesh',age=23)
 
-Flask_Application_Instance.run(debug=True)
+Flask_Application_Instance.run(debug=True,host='172.20.10.6',port=5001)
